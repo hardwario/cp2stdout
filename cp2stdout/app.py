@@ -3,7 +3,6 @@ import json
 import logging.config
 import sys
 import simplejson as json
-import paho.mqtt.client
 import zmq
 from .config import load_config
 
