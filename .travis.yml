@@ -1,0 +1,14 @@
+sudo: false
+language: python
+python: 3.4
+script:
+- "./test.sh"
+- "./build.sh"
+deploy:
+  provider: pypi
+  skip_cleanup: true
+  user: hardwario
+  on:
+    tags: true
+  password:
+    secure: PAus+iRf6+R1V+m08y3OCxZdXLFqTOEnHY6MvRb/C/xd1jaXcPH8w49WhLToAqSqMjXaHfi5lMDzg+3KfKEcyPRw4xTFFLrtFLWsiqM78bhs9RP/FAEbWvd6TeQH6bRnTm1LcLYYisVas0uCf05rj3R3gMiwEznW/yOSU/2vpt00j61uJkqBf3J+02l/Hz3yvhSslJmYW/h9GhazkWI9x1Jccs2VyMewgtgWALGwgxCZkpcGqPYT4gJTkFg0gM/yg405HXq71HSFn6vLPi2mN+cacIyFPxL3WnS3COnzJHcN0XujbfogqjtCaoGQQqP29g/poNEZVpKV4C3GD2dFAVsao6gzu7xLTNHRDjo4C/CaZG6eiuS2WtlUpZvRsV05WOQxkMTycsNP2RR3nsedrGvLVsuWYoLtyd3cLJCnUEIlDF7GVRInJt0fcFF3DR01Ilo+adzh9P30RHoJ1hHlcvfMjB0Ckltde8eOBKypctSHQx//Z4iUCTONez842VBouuwTC6FpzSPrQfw4TfjmLfZtIUYb0/bP5upjS/ljUsUA0joCUG5YXY1fNJ666sMJdB8+tus4ADW+/oPMsonT4aUtfoeENuxgP20XCbwJtzhnZqx/r9jUjGmgHYy4Dnz5DW+pYU9QU5W5/53iqRxBSRRNwbqmhGyZlZiIzCF7pwk=
