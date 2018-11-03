@@ -1,0 +1,4 @@
+zmq:
+  host: localhost
+  port: 5680
+  timeout: 5000
