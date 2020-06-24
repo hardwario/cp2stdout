@@ -60,8 +60,8 @@ python3 -m pycodestyle --ignore=E501 cp2stdout
 einfo 'Test parse config.yml'
 tmpfile=$(mktemp)
 cat config.yml | sed "s/connection_string:/connection_string: test/g" > $tmpfile
-python3 -c 'from cp2stdout import app;app.main()' -c $tmpfile --test
+python3 -c 'from cp2stdout import main;main()' -c $tmpfile --test
 rm $tmpfile
 
-einfo 'Test setup.py'
-python3 setup.py test
+# einfo 'Test setup.py'
+# python3 setup.py test

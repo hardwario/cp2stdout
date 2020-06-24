@@ -48,13 +48,17 @@ if [ -z "${TRAVIS_BUILD_DIR:-}" ]; then
     echo "$BUILD_DIR"
     mkdir -p "$BUILD_DIR"
     cp -r cp2stdout "$BUILD_DIR"/cp2stdout
+    cp requirements.txt "$BUILD_DIR"
+    cp README.md "$BUILD_DIR"
+    cp LICENSE "$BUILD_DIR"
+    cp MANIFEST.in "$BUILD_DIR"
     cp setup.py "$BUILD_DIR"/
     cd "$BUILD_DIR"
 fi
 
 ls -lha
 
-set_version cp2stdout/app.py
+set_version cp2stdout/__init__.py
 set_version setup.py
 
 python3 setup.py sdist
